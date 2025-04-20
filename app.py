@@ -25,13 +25,14 @@ fig.update_layout(
     yaxis_title="",
     legend = dict(
         orientation="h",
-        y=0.2,
+        y=-2,
         x=0.5,
-        xanchor="center"
+        xanchor="center",
+        yanchor="top"
     ),
-    font = dict(size=13,
+    font = dict(size=16,
                 color = "black"),
-    height=600,
+    height=500,
     margin= dict(t=50, b=100),
     barmode='relative',
     template='plotly_white',
