@@ -16,12 +16,23 @@ fig = go.Figure()
 for comp in componentes:
     fig.add_trace(go.Bar(x=fechas, y=df[comp], name=comp, hovertemplate=f'{comp}: %{{y:.2f}}'))
 
-fig.add_trace(go.Scatter(x=fechas, y=fci, name='FCI', mode='lines+markers', line=dict(color='black'), hovertemplate='FCI: %{y:.2f}'))
+fig.add_trace(go.Scatter(x=fechas, y=fci, name='FCI', mode='lines', line=dict(color='black'), 
+                         hovertemplate='FCI: %{y:.2f}'))
 
 fig.update_layout(
-    title="FCI y Contribuciones por grupo",
+    title="FCI y contribuciones por grupo",
     xaxis_title="Fecha",
-    yaxis_title="Contribución",
+    yaxis_title="",
+    legend = dict(
+        orientation="h",
+        y=0.2,
+        x=0.5,
+        xanchor="center"
+    ),
+    font = dict(size=13,
+                color = "black"),
+    height=600,
+    margin= dict(t=50, b=100),
     barmode='relative',
     template='plotly_white',
     hovermode="x unified"
