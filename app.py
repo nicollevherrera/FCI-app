@@ -17,7 +17,7 @@ fig = go.Figure()
 for comp in componentes:
     fig.add_trace(go.Bar(x=fechas, y=df[comp], name=comp, hovertemplate=f'{comp}: %{{y:.2f}}'))
 
-fig.add_trace(go.Scatter(x=fechas, y=fci, name='FCI', mode='lines', line=dict(color='black'), 
+fig.add_trace(go.Scatter(x=fechas, y=fci, name='ICF', mode='lines', line=dict(color='black'), 
                          hovertemplate='FCI: %{y:.2f}'))
 
 fig.update_layout(
@@ -56,6 +56,8 @@ st.markdown("""
     del indicador (precios, expectativas,riesgo y crédito). Las contribuciones suman el valor del índice. </em>
 </div>
 """, unsafe_allow_html=True)
+
+st.markdown("<br>", unsafe_allow_html=True)  
 
 def to_excel(df):
     output = io.BytesIO()
