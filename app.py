@@ -45,11 +45,17 @@ fig.update_layout(
     yaxis=dict(
         tickfont=dict(color='black')  
     ),
-
+    
     plot_bgcolor='white',  
-    paper_bgcolor='white', 
-    bordercolor='black',  
-    borderwidth=2  
+    paper_bgcolor='white',  
+    shape=dict(
+        type='rect',  
+        x0=0, x1=1, y0=0, y1=1,
+        line=dict(
+            color="black", 
+            width=2  
+        )
+    )
 )
 
 st.title("Índice de Condiciones Financieras (FCI) para Colombia")
