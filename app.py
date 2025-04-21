@@ -33,8 +33,8 @@ fig.update_layout(
         font=dict(size=18, color = "black")
     ),
     font = dict(size=20, color = "black"),
-    height=500, 
-    width=1000,
+    height=400, 
+    width=2000,
     margin= dict(t=50, b=100),
     barmode='relative',
     template='plotly_white',
