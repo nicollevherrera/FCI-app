@@ -29,9 +29,10 @@ fig.update_layout(
         y=-0.1,
         x=0.5,
         xanchor="center",
-        yanchor="top"
+        yanchor="top",
+        font=dict(size=20, color = "black")
     ),
-    font = dict(size=25,
+    font = dict(size=20,
                 color = "black"),
     height=600,
     margin= dict(t=50, b=100),
