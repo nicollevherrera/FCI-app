@@ -15,10 +15,10 @@ fechas = df['Fecha']
 fig = go.Figure()
 
 for comp in componentes:
-    fig.add_trace(go.Bar(x=fechas, y=df[comp], name=comp, hovertemplate = comp + ':%{y:.2f}'))
+    fig.add_trace(go.Bar(x=fechas, y=df[comp], name=comp, hovertemplate = comp + ':%{.2f}'))
 
 fig.add_trace(go.Scatter(x=fechas, y=fci, name='ICF', mode='lines', line=dict(color='black'),
-                         hovertemplate='FCI: %{y:.2f}'))
+                         hovertemplate='FCI: %{.2f}'))
 
 fig.update_layout(
     title="ICF y contribuciones por grupo",
