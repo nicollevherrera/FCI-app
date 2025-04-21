@@ -41,3 +41,11 @@ fig.update_layout(
 
 st.title("Índice de Condiciones Financieras (FCI) para Colombia")
 st.plotly_chart(fig, use_container_width=True)
+
+excel_file = to_excel(df)
+st.download_button(
+    label="📥 Descargar datos en Excel",
+    data=excel_file,
+    file_name="Contribuciones.xlsx",
+    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
