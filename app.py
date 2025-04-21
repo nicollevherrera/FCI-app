@@ -32,14 +32,19 @@ fig.update_layout(
         yanchor="top",
         font=dict(size=18, color = "black")
     ),
-    font = dict(size=20,
-                color = "black"),
+    font = dict(size=20, color = "black"),
     height=500, 
     width=1000,
     margin= dict(t=50, b=100),
     barmode='relative',
     template='plotly_white',
-    hovermode="x unified"
+    hovermode="x unified",
+    xaxis=dict(
+        tickfont=dict(color='black')  
+    ),
+    yaxis=dict(
+        tickfont=dict(color='black')  
+    )
 )
 
 st.title("Índice de Condiciones Financieras (FCI) para Colombia")
