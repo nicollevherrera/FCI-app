@@ -21,7 +21,7 @@ fig.add_trace(go.Scatter(x=fechas, y=fci, name='ICF', mode='lines', line=dict(co
                          hovertemplate='FCI: %{y:.2f}'))
 
 fig.update_layout(
-    title="IFC y contribuciones por grupo",
+    title="ICF y contribuciones por grupo",
     xaxis_title="",
     yaxis_title="",
     legend = dict(
