@@ -22,7 +22,7 @@ fig.add_trace(go.Scatter(x=fechas, y=fci, name='FCI', mode='lines', line=dict(co
 
 fig.update_layout(
     title="FCI y contribuciones por grupo",
-    xaxis_title="Fecha",
+    xaxis_title="",
     yaxis_title="",
     legend = dict(
         orientation="h",
