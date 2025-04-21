@@ -50,6 +50,12 @@ fig.update_layout(
 st.title("Índice de Condiciones Financieras (ICF) para Colombia")
 st.markdown('A continuación se muestra la estimación del ICF siguiendo la metología propuesta por Koop, G., & Korobilis, D. (2014). Las estimaciones continúan sujetas a revisión.')
 st.plotly_chart(fig, use_container_width=True)
+st.markdown("""
+<div style="text-align: center; font-size: 14px; color: gray;">
+    <em><strong>Nota:</strong> este gráfico muestra el ICF junto con las contribuciones al índice de las cuatro categorías
+    del indicador (precios, expectativas,riesgo y crédito). Las contribuciones suman el valor del índice. </em>
+</div>
+""", unsafe_allow_html=True)
 
 def to_excel(df):
     output = io.BytesIO()
