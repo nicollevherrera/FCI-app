@@ -21,7 +21,7 @@ fig.add_trace(go.Scatter(x=fechas, y=fci, name='FCI', mode='lines', line=dict(co
                          hovertemplate='FCI: %{y:.2f}'))
 
 fig.update_layout(
-    title="FCI y contribuciones por grupo",
+    title="IFC y contribuciones por grupo",
     xaxis_title="",
     yaxis_title="",
     legend = dict(
@@ -58,7 +58,8 @@ fig.update_layout(
     )
 )
 
-st.title("Índice de Condiciones Financieras (FCI) para Colombia")
+st.title("Índice de Condiciones Financieras (ICF) para Colombia")
+st.markdown('A continuación se muestra la estimación del ICF siguiendo la metología propuesta por Koop, G., & Korobilis, D. (2014). Las estimaciones continúan sujetas a revisión.')
 st.plotly_chart(fig, use_container_width=True)
 
 def to_excel(df):
