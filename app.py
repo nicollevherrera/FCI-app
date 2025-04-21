@@ -8,7 +8,7 @@ df = pd.read_csv("Contribuciones.csv")
 if 'Fecha' in df.columns:
     df['Fecha'] = pd.to_datetime(df['Fecha'])
 
-componentes = ['Precios', 'Expectativas', 'Riesgo', 'Crédito','Desempeño']
+componentes = ['Riesgo', 'Precios', 'Crédito', 'Expectativas','Desempeño']
 fci = df['FCI']
 fechas = df['Fecha']
 
