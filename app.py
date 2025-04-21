@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
+import io
 
 df = pd.read_csv("Contribuciones.csv")
 
@@ -41,6 +42,12 @@ fig.update_layout(
 
 st.title("Índice de Condiciones Financieras (FCI) para Colombia")
 st.plotly_chart(fig, use_container_width=True)
+
+def to_excel(df):
+    output = io.BytesIO()
+    with pd.ExcelWriter(output, engine='xlsxwriter') as writer:
+        df.to_excel(writer, index=False, sheet_name='Contribuciones')
+    return output.getvalue()
 
 excel_file = to_excel(df)
 st.download_button(
