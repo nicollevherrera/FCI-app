@@ -26,12 +26,12 @@ fig.update_layout(
     yaxis_title="",
     legend = dict(
         orientation="h",
-        y=-0.5,
+        y=-0.1,
         x=0.5,
         xanchor="center",
         yanchor="top"
     ),
-    font = dict(size=16,
+    font = dict(size=25,
                 color = "black"),
     height=600,
     margin= dict(t=50, b=100),
