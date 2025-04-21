@@ -67,7 +67,7 @@ def to_excel(df):
 
 excel_file = to_excel(df)
 st.download_button(
-    label="📥 Descargar datos en Excel",
+    label="📥 Descargar datos en excel",
     data=excel_file,
     file_name="Contribuciones.xlsx",
     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
