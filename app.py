@@ -18,7 +18,7 @@ for comp in componentes:
     fig.add_trace(go.Bar(x=fechas, y=df[comp], name=comp, hovertemplate = ':%{y:.2f}'))
 
 fig.add_trace(go.Scatter(x=fechas, y=fci, name='ICF', mode='lines', line=dict(color='black'),
-                         hovertemplate='%{.2f}'))
+                         hovertemplate='%{y:.2f}'))
 
 fig.update_layout(
     title="ICF y contribuciones por grupo",
